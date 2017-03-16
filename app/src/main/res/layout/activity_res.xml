@@ -12,7 +12,7 @@
     tools:context="com.example.park.myapplication.ResActivity">
 
     <TextView
-        android:text="레스토랑을 시작하려면 아래를 누르세요."
+        android:text="레스토랑예 약을 시작하려면 아래를 누르세요."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView4" />
@@ -54,6 +54,9 @@
 
 
     <FrameLayout
+        android:id="@+id/framelayout"
+        android:visibility="invisible"
+        android:background="#e987bb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -72,9 +75,9 @@
             android:visibility="invisible"
             android:id="@+id/grid1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="fill"
+            android:layout_weight="1"
             android:rowCount="3"
             android:columnCount="2">
 
@@ -82,46 +85,63 @@
                 android:text="성인"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView10" />
+                android:id="@+id/textView10"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:id="@+id/adult" />
+                android:id="@+id/adult"
+                android:hint="인원을 입력해주세요."
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
 
             <TextView
                 android:text="청소년"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView12" />
+                android:id="@+id/textView12"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:id="@+id/teen" />
+                android:id="@+id/teen"
+                android:hint="인원을 입력해주세요."
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
 
             <TextView
                 android:text="어린이"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView9" />
+                android:id="@+id/textView9"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:id="@+id/baby" />
+                android:id="@+id/baby"
+                android:hint="인원을 입력해주세요."
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
 
         </GridLayout>
 
         <GridLayout
-
+            android:background="#ffffff"
             android:visibility="invisible"
             android:id="@+id/grid2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="20dp"
             android:orientation="horizontal"
             android:rowCount="7"
             android:columnCount="2">
@@ -197,7 +217,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/babytextView" />
             <TextView
-                android:gravity="center"
                 android:text="예약되었습니다."
                 android:textColor="#b62121"
                 android:textSize="20dp"
