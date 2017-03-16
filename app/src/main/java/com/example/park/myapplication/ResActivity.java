@@ -1,5 +1,6 @@
 package com.example.park.myapplication;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -50,12 +51,12 @@ public class ResActivity extends AppCompatActivity {
     void init() {
         s1 = (Switch) findViewById(R.id.switch1);
         t1 = (TextView) findViewById(R.id.time);
-        t2 = (TextView) findViewById(R.id.time);
-        t3 = (TextView) findViewById(R.id.time);
-        t4 = (TextView) findViewById(R.id.time);
-        t5 = (TextView) findViewById(R.id.time);
-        t6 = (TextView) findViewById(R.id.time);
-        t7 = (TextView) findViewById(R.id.time);
+        t2 = (TextView) findViewById(R.id.datetextView);
+        t3 = (TextView) findViewById(R.id.timetextView);
+        t4 = (TextView) findViewById(R.id.adulttextView);
+        t5 = (TextView) findViewById(R.id.teentextView);
+        t6 = (TextView) findViewById(R.id.babytextView);
+      //  t7 = (TextView) findViewById(R.id.time);
         e1 = (EditText) findViewById(R.id.adult);
         e2 = (EditText) findViewById(R.id.teen);
         e3 = (EditText) findViewById(R.id.baby);
@@ -77,9 +78,25 @@ public class ResActivity extends AppCompatActivity {
                     change();
                 }
                 else{
-                    index--;
+                    index = -1;
                     change();
                 }
+            }
+        });
+
+        datePicker.init(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth(), new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
+                t2.setText(i+"년"+(i1+1)+"월"+i2+"일");
+            }
+        });
+        timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker timePicker, int i, int i1) {
+
+                int hour = timePicker.getCurrentHour();
+                int minute = timePicker.getCurrentMinute();
+                t3.setText(hour+"시"+minute+"분");
             }
         });
     }
@@ -90,6 +107,12 @@ public class ResActivity extends AppCompatActivity {
             b1.setVisibility(View.INVISIBLE);
             b2.setVisibility(View.INVISIBLE);
             datePicker.setVisibility(View.INVISIBLE);
+            timePicker.setVisibility(View.INVISIBLE);
+            g1.setVisibility(View.INVISIBLE);
+            g2.setVisibility(View.INVISIBLE);
+            b2.setEnabled(true);
+            t2.setText("0000년00월00일");
+            t3.setText("00시00분");
         }
         else if(index == 0) {
             c1.start();

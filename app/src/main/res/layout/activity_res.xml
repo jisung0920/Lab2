@@ -117,6 +117,7 @@
         </GridLayout>
 
         <GridLayout
+
             android:visibility="invisible"
             android:id="@+id/grid2"
             android:layout_width="match_parent"
@@ -128,10 +129,11 @@
 
             <TextView
                 android:layout_columnSpan="2"
+                android:gravity="center"
                 android:text="예약결과는 다음과 같습니다."
-                android:textSize="50dp"
+                android:textSize="20dp"
                 android:textColor="#3e5ca7"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView16" />
 
@@ -142,10 +144,12 @@
                 android:id="@+id/textView15" />
 
             <TextView
+                android:layout_gravity="right"
                 android:text="0000년00월00일"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/datetextView" />
+                android:id="@+id/datetextView"
+               />
 
             <TextView
                 android:text="시간"
@@ -154,6 +158,7 @@
                 android:id="@+id/textView13" />
 
             <TextView
+                android:layout_gravity="right"
                 android:text="00시00분"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -164,6 +169,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView18" />
             <TextView
+                android:layout_gravity="right"
                 android:text="00명"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -174,6 +180,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView110" />
             <TextView
+                android:layout_gravity="right"
                 android:text="00명"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -184,14 +191,16 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView112" />
             <TextView
+                android:layout_gravity="right"
                 android:text="00명"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/babytextView" />
             <TextView
+                android:gravity="center"
                 android:text="예약되었습니다."
                 android:textColor="#b62121"
-                android:textSize="50dp"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView11" />
