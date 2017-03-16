@@ -20,7 +20,7 @@
         android:textColor="#405297"/>
     <TableLayout
         android:stretchColumns="*"
-        android:background="#cf5d5d"
+        android:background="#efd657"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -153,7 +153,7 @@
                 android:id="@+id/textView8" />
 
             <ImageView
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/a"

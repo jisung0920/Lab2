@@ -168,11 +168,11 @@ public class ResActivity extends AppCompatActivity {
         if(A.length()==0 || B.length()==0 || C.length() ==0) {
             Toast.makeText(getApplicationContext(), "전부입력해주세요.", Toast.LENGTH_SHORT).show();
             if(A.length()==0)
-                e1.findFocus();
+                e1.requestFocus();
             else if(B.length()==0)
-                e2.findFocus();
+                e2.requestFocus();
             else if(C.length()==0)
-                e3.findFocus();
+                e3.requestFocus();
         }
         else {
             t4.setText(A + "명");

@@ -18,7 +18,7 @@ public class GradeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade);
-        setTitle("학점을 계산기");
+        setTitle("학점 계산기");
         init();
     }
     public void GradeonClick(View v) {
@@ -28,6 +28,12 @@ public class GradeActivity extends AppCompatActivity {
             String E = e3.getText().toString();
             if(K.length() ==0 || M.length() == 0 || E.length() == 0) {
                 Toast.makeText(getApplicationContext(), "숫자를 입력해주세요.", Toast.LENGTH_SHORT).show();
+                if(K.length()==0)
+                    e1.requestFocus();
+                else if(M.length()==0)
+                    e2.requestFocus();
+                else
+                    e3.requestFocus();
             }
             else {
                 int result = Integer.parseInt(K) + Integer.parseInt(M) + Integer.parseInt(E);
@@ -54,7 +60,7 @@ public class GradeActivity extends AppCompatActivity {
             e1.setText("");
             e2.setText("");
             e3.setText("");
-            i1.setVisibility(View.INVISIBLE);
+            i1.setVisibility(View.GONE);
             t1.setText(0+"점");
             t2.setText(0+"점");
         }
