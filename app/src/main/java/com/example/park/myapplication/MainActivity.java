@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         init();
     }
-    public void onClick(View v) {
+    public void onClick(View v) {//리퀘스트 받아줘
         if(v.getId() == R.id.button1) {
             Log.d("confirm","good");
             Intent intent = new Intent(MainActivity.this, GradeActivity.class);
