@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
     public void onClick(View v) {//리퀘스트 받아줘
-        if(v.getId() == R.id.button1) {
+        if(v.getId() == R.id.button1) {//test
             Log.d("confirm","good");
             Intent intent = new Intent(MainActivity.this, GradeActivity.class);
             startActivity(intent);
